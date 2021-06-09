@@ -1,0 +1,629 @@
+/* 追加フォント：　font-family: 'Odibee Sans', cursive; */
+
+/* 共通 */
+.container{
+  max-width: 1024px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+
+html{
+  font-size: 16px;
+}
+
+
+body{
+  color: #f5f5f7;
+  font-size: 1rem;
+  font-family: "YuGothic", Yu Gothic, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.6s;
+}
+
+a:hover {
+  transition: 0.6s;
+}
+
+h1 {
+  font-family: 'Odibee Sans', cursive;
+  font-size: 4rem;
+  letter-spacing: 10px;
+  color: #f5f5f7;
+  font-weight: normal;
+
+}
+
+h2 {
+  font-family: 'Odibee Sans', cursive;
+  font-size: 3rem;
+  letter-spacing: 4px;
+  color: #f5f5f7;
+  font-weight: normal;
+  margin-bottom: -5px;
+}
+
+.title {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+
+#aboutUs, #plans, #visit, #season, #photos, #info, #contact {
+  padding: 80px 0;
+}
+
+ul, li, ol {
+  list-style-type: none;
+}
+/* 共通（終） */
+
+
+
+/* header nav */
+
+
+
+.g-navi{
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  position: fixed;
+  z-index: 30;
+}
+
+.g-navi ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.g-navi ul li {
+  flex-basis: 16.6%;
+  text-align: center;
+}
+
+.g-navi ul li a {
+  display: block;
+  color: #f5f5f7;
+  padding: 13px 0;
+}
+
+.g-navi ul li a:hover {
+  background-color: #c0c0c0;
+}
+
+
+/* メインビジュアル */
+
+#main-visual {
+  background-image: url(../image/mv01.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  max-height: 100%;
+}
+
+.mv-wrapper {
+  position: relative;
+}
+
+.mv-title {
+  position: absolute;
+  top: 270px;
+  right: 0;
+  max-width: 100%;
+  text-shadow: 2px 2px 4px black;
+}
+
+.text {
+  letter-spacing: 4px;
+  text-align: center;
+  filter: drop-shadow(4px 2px 4px black);
+  text-shadow: 2px 2px 4px black;
+}
+
+/* about us */
+
+#aboutUs {
+  background-color: black;
+  text-align: center;
+}
+
+  /* リピ共通 */
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+  font-weight: normal;
+}
+
+.about-text {
+  font-size: 1rem;
+  letter-spacing: 0.8px;
+}
+/*  */
+
+
+
+.aboutUs-text {
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+/* プラン */
+
+#plans {
+  background-color: #696969;
+  text-align: center;
+}
+
+.plans-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.plans-box {
+  max-width: 320px;
+}
+
+.box-design {
+  background-color: #a9a9a9;
+}
+
+.plans-image {
+  margin: 20px 20px 0 20px;
+}
+
+.plans-title-en {
+  font-size: 1.8rem;
+  font-family: 'Odibee Sans', cursive;
+  letter-spacing: 4px;
+}
+
+.plans-text {
+   padding: 20px 15px;
+}
+
+.plans-title-ja {
+  margin-top: -5px;
+  margin-bottom: 5px;
+}
+
+.plans-about {
+  margin: 10px 10px;
+}
+
+
+/* visit */
+
+#visit {
+  /* background-image:url(../image/click.png);
+  background-size: 5%, 5%;
+  background-position: top 200px left 100px; */
+  background-color: black;
+  text-align: center;
+}
+
+.visit-menu {
+  margin-bottom: 3rem;
+}
+
+.visit-menu ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  border-bottom: 2px solid #f5f5f7;
+}
+
+.visit-menu ul li {
+  width: 100%;
+  text-align: center;
+}
+
+.visit-menu ul li a {
+  color: #696969;
+  display: block;
+  color: #f5f5f7;
+  background-color: #808080;
+  border-radius: 30px 30px 0 0;
+  padding: 0.5rem 0;
+  transition: 0.6s;
+}
+
+.visit-menu ul li a:hover {
+  color: #696969;
+  background-color: #f5f5f7;
+  transition: 0.6s;
+}
+
+/* メニューリストの中で、いま表示しているページのメニューだけ文字色や背景色が異なる設定をしてあげることがよくあります。「いまこのページを表示してますよ」と可視化してあげてます。
+表示されている商品ラインナップがメニューと同様のときに、マウスオン時と同じスタイルになるよう、class名（.active）がメニュー（liタグ）にある場合のCSS設定をします。 */
+
+.visit-menu ul li a.active {
+  color: #696969;
+  background-color: #f5f5f7;
+}
+
+
+
+  /* 観光名所リスト */
+
+.visit-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.visit-place {
+ flex-basis: 31%;
+ display: none;
+}
+
+/* 最初のランドマークだけデフォルト表示 */
+.visit-place.is-showed{
+  display: block;
+}
+
+.place-name {
+  margin-top: 10px;
+}
+
+.place-text {
+  line-height: 1.3rem;
+  padding-top: 10px;
+}
+
+
+
+
+
+
+
+/* season */
+
+#season {
+  background-color: #f5f5f7;
+  color: #696969;
+}
+
+#season .title h2 {
+ color: #696969;
+}
+
+.season-copy .subtitle {
+  text-align: center;
+}
+
+.season-wrapper {
+  position: relative;
+}
+
+/* 1枚目　.activeを持つ.staff-boxのみ表示させる */
+.season-box.active{
+  background-color: #dcdcdc;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+/* 2枚目以降 */
+.season-box {
+ display: none;
+}
+
+.season-text {
+margin-left: 30px;
+}
+
+.season-text h3 {
+  text-align: center;
+  padding-top: 15px;
+}
+
+.season-about {
+  padding: 40px 50px 20px 50px;
+}
+
+
+/* 戻る・進むボタン */
+.slide-button {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  border-top: 2px solid #696969;
+  margin: auto;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev {
+  left: -30px;
+  border-left:  2px solid #696969;
+  transform: rotate(-45deg);
+}
+
+.next {
+  right: -30px;
+  border-right:  2px solid #696969;
+  transform: rotate(45deg);
+}
+
+
+
+/* photosギャラリー */
+#photos {
+  background-color: #696969;
+  text-align: center;
+}
+
+.photos-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.photo-box a{
+  display: block;
+  padding: 20px 20px 10px 20px;
+  background-color: #f5f5f7;
+  margin-bottom: 30px;
+}
+
+.photo-box a:hover {
+  box-shadow: 2px 15px 30px -5px black;
+}
+
+
+/* モーダル */
+
+.modal-window {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+}
+
+.modal-img {
+  margin: 50px 0 10px 0;
+  max-width: 900px;
+  max-height: 500px;
+}
+
+.modalClose {
+  display: block;
+  cursor: pointer;
+  background-color: black;
+  font-size: 1.4rem;
+  padding: 10px 0;
+  width: 240px;
+  margin: 0 auto;
+}
+
+.modalClose:hover {
+  background-color: #c0c0c0;
+  transition: 0.6s;
+}
+
+
+
+
+/* info */
+
+#info {
+  background-color: black;
+}
+
+.info-copy {
+  text-align: center;
+}
+
+.info-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.info-text {
+  padding: 30px 0 0 100px;
+  line-height: 1.2;
+}
+
+.info-box {
+  display: block;
+  padding-bottom: 20px;
+}
+
+.info-title {
+  float: left;
+  width: 110px;
+}
+
+.main {
+  width: 400px;
+}
+
+.main-address {
+  padding-left: 110px;
+}
+
+.tel {
+  color: #f5f5f7;
+}
+
+
+/* contact */
+
+#contact {
+  color: black;
+  background-image: url(../image/co01.JPG);
+  background-color:rgba(255,255,255,0.8);
+  background-blend-mode:lighten;
+  background-size: cover;
+}
+
+#contact .title h2 {
+  color: black;
+}
+
+.reservation-button {
+  text-align: center;
+  margin-bottom: 60px;
+  margin-top: -15px;
+}
+
+.reservation-button a {
+  display: inline-block;
+  background-color: black;
+  color: #f5f5f7;
+  padding: 10px 100px;
+  font-size: 1.4rem;
+  transition: 0.6s;
+}
+
+.reservation-button a:hover {
+  background-color: #808080;
+  transition: 0.6s;
+}
+
+
+.contact-copy {
+  text-align: center;
+}
+
+.contact-copy p {
+  border: 1.5px solid #b1b1b1;
+  margin-bottom: 60px;
+}
+
+
+/* サーバーサイド未実装 */
+form {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.contact-box {
+  margin-bottom: 30px;
+}
+
+.form-text{
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-name, .form-mail {
+  border: 1.5px solid #b1b1b1;
+  width: 100%;
+  height: 40px;
+  background: #f5f5f7;
+}
+
+textarea {
+  border: 1.5px solid #b1b1b1;
+  width: 100%;
+  background: #f5f5f7;
+}
+
+.send-button {
+  display: block;
+  background-color: black;
+  color: #f5f5f7;
+  font-size: 1.2rem;
+  padding: 10px 120px;
+  margin: 0 auto;
+  transition: 0.6s;
+}
+
+.send-button:hover {
+  background-color: #808080;
+  transition: 0.6s;
+}
+
+
+/* フッター */
+
+footer {
+  background-color: #696969;
+  padding-top: 60px;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  flex-grow: 2;
+}
+
+.logo {
+  font-family: 'Odibee Sans', cursive;
+  font-size: 2.5rem;
+  letter-spacing: 9px;
+  color: #f5f5f7;
+  font-weight: normal;
+}
+
+.logo:hover {
+  text-shadow: #dcdcdc 1px 0 20px;
+  transition: 0.3s;
+}
+
+
+.sns-block {
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+.sns-icon {
+  margin-right: 20px;
+  font-size: 2rem;
+  color: #f5f5f7;
+}
+
+.sns-icon:hover {
+  text-shadow: #dcdcdc 1px 0 20px;
+  transition: 0.3s;
+}
+
+.footer-menu {
+  flex-grow: 1;
+}
+
+.footer-menu ul li {
+  margin-bottom: 10px;
+}
+
+.footer-menu ul li a {
+  color: #f5f5f7;
+  margin-bottom: 10px;
+}
+
+.footer-menu ul li a:hover {
+  text-shadow: #dcdcdc 2px 0 10px;
+  transition: 0.3s;
+}
+
+
+footer small {
+  display: block;
+  padding-bottom: 20px;
+  margin-top: 100px;
+  text-align: center;
+}

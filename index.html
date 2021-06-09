@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- スマホなどで閲覧した際の「表示領域」を設定 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manhattan Trip</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- 追加フォント -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+  <!-- SNSアイコン -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- javascript　jQueryを同期 -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="./js/script.js"></script>
+</head>
+
+
+<body>
+  <!-- ヘッダーメニュー -->
+  <header>
+    <nav class="g-navi">
+      <div class="container nav-wrapper">
+        <ul>
+          <!-- concept -->
+          <li><a href="#aboutUs">ABOUT US</a></li>
+          <!-- Feature -->
+          <li><a href="#plans">PLANS</a></li>
+          <!-- Line Up -->
+          <li><a href="#visit">VISIT</a></li>
+          <!-- macaronlife ポップアップ機能 -->
+          <li><a href="#photos">GALLERY</a></li>
+          <!-- store -->
+          <li><a href="#info">COMPANY INFO</a></li>
+          <!-- contact -->
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+  </header>
+
+  <!-- メインビジュアル -->
+  <section id="main-visual">
+    <div class="container mv-wrapper">
+      <div class="mv-title">
+        <h1>Manhattan Trip</h1>
+        <p class="text">ニューヨーク・マンハッタンを体験する</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 1.ABOUT US -->
+  <section id="aboutUs">
+    <div class="container">
+      <div class="title">
+        <h2>ABOUT US</h2>
+      </div>
+      <div class="aboutUs-copy">
+        <h3 class="subtitle">世界一の都市マンハッタンへ行こう</h3>
+        <p class="aboutUs-text about-text">マンハッタンは「眠らない街」とも呼ばれ、政治や金融の国際的中心地として有名です。</p>
+        <p class="aboutUs-text about-text">歴史的な美しい超高層ビルが多く建ち並び、<br>またエンターテイメントや、最先端のアートにも触れることができる街で、<br>毎年約4,700万人の観光客が訪れています。</p>
+        <p class="aboutUs-text about-text">私たちはお客様の旅の目的に沿って、充実したマンハッタンへのガイドツアーを提供します。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANS -->
+  <section id="plans">
+    <div class="container">
+      <div class="title">
+        <h2>PLANS</h2>
+      </div>
+      <div class="plans-copy">
+        <h3 class="subtitle">以下の点を柔軟に設定し、旅程をカスタマイズします</h3>
+      </div>
+      <div class="plans-wrapper">
+        <!-- ボックス１ -->
+        <div class="plans-box box-design">
+          <img class="plans-image" src="./image/money.png" alt="money" height="180px" width="180px">
+          <div class="plans-text">
+            <span class="plans-title-en">Budget</span>
+            <h3 class="plans-title-ja">予算</h3>
+            <p class="plans-about about-text">お客様のご予算に合わせて、日本〜NY間のフライト、宿泊ホテル、観光ツアーなどを手配します。</p>
+            </ul>
+          </div>
+        </div>
+        <!-- ボックス２ -->
+        <div class="plans-box box-design">
+          <img class="plans-image" src="./image/calendar.png" alt="calender" height="180px" width="180px">
+          <div class="plans-text">
+            <span class="plans-title-en">Days</span>
+            <h3 class="plans-title-ja">日数</h3>
+            <p class="plans-about about-text">ご希望の旅行日数に合わせて、<br>無理のない範囲で充実した観光プランを立てます。
+            </p>
+          </div>
+        </div>
+        <!-- ボックス３ -->
+        <div class="plans-box box-design">
+          <img class="plans-image" src="./image/mindset.png" alt="mind" height="180px" width="180px">
+          <div class="plans-text">
+            <span class="plans-title-en">Purpose</span>
+            <h3 class="plans-title-ja">目的</h3>
+            <p class="plans-about about-text">「歴史」「アート」「グルメ」などといった、お客様の興味や旅の目的に沿った、適切なプランを提示します。</p>
+          </div>
+        </div>
+      </div>
+
+  </section>
+
+  <!-- 観光名所 メニュータグ付き-->
+  <section id="visit">
+    <div class="container">
+      <div class="title">
+        <h2>VISIT</h2>
+      </div>
+      <div class="visit-copy">
+        <h3 class="subtitle">主な観光名所</h3>
+      </div>
+      <!-- メニュータグ　jQueryで切り替えメニュー処理 -->
+      <div class="visit-menu">
+        <ul class="filter">
+          <li class="visit-tab"><a class="landmark active" data-filter="landmark" href="#">ランドマーク</a></li>
+          <li class="visit-tab"><a class="history" data-filter="history" href="#">歴史</a></li>
+          <li class="visit-tab"><a class="art" data-filter="art" href="#">アート</a></li>
+          <li class="visit-tab"><a class="architecture" data-filter="architecture" href="#">建築</a></li>
+          <li class="visit-tab"><a class="view" data-filter="view" href="#">景色</a></li>
+        </ul>
+      </div>
+      <div class="visit-wrapper">
+        <!-- ランドマーク１ -->
+        <div class="visit-place is-showed" data-category="landmark">
+          <!-- 画像 -->
+          <div class="place-image">
+            <img src="./image/icon1.JPG" alt="タイムズスクエア" width="250px" height="250px">
+          </div>
+          <!-- 説明 -->
+          <div class="place-about">
+            <div class="place-name">
+              <h3>タイムズスクエア</h3>
+            </div>
+            <p class="place-text about-text">
+                    華やかなネオンとブロードウェイの舞台
+                  </p>
+          </div>
+        </div>
+        <!-- ランドマーク２ -->
+        <div class="visit-place is-showed" data-category="landmark">
+          <!-- 画像 -->
+          <div class="place-image">
+            <img src="./image/icon2.JPG" alt="自由の女神" width="250px" height="250px">
+          </div>
+          <!-- 説明 -->
+          <div class="place-about">
+            <div class="place-name">
+              <h3>自由の女神</h3>
+            </div>
+            <p class="place-text about-text">ニューヨーク港にあるアメリカの象徴</p>
+          </div>
+        </div>
+        <!-- 歴史１ -->
+        <div class="visit-place" data-category="history">
+          <!-- 画像 -->
+          <div class="place-image">
+            <img src="./image/history1.JPG" alt="博物館　恐竜" width="250px" height="250px">
+          </div>
+          <!-- 説明 -->
+          <div class="place-about">
+            <div class="place-name">
+              <h3>アメリカ自然史博物館</h3>
+            </div>
+            <p class="place-text about-text">恐竜から宇宙まで<br>自然をテーマにした巨大博物館
+                  </p>
+          </div>
+        </div>
+        <!-- 歴史２ -->
+        <div class="visit-place" data-category="history">
+          <!-- 画像 -->
+          <div class="place-image">
+            <img src="./image/hisotry2.JPG" alt="ワールドトレードセンター 9.11" width="250px" height="250px">
+          </div>
+          <!-- 説明 -->
+          <div class="place-about">
+            <div class="place-name">
+              <h3>9.11メモリアル</h3>
+            </div>
+            <p class="place-text about-text">2001年世界貿易センタービルへのテロ攻撃に関する資料が展示されている</p>
+          </div>
+        </div>
+        <!-- 歴史３ -->
+        <div class="visit-place" data-category="history">
+          <!-- 画像 -->
+          <div class="place-image">
+            <img src="./image/hstory3.JPG" alt="セント・パトリック大聖堂" width="250px" height="250px">
+          </div>
+          <!-- 説明 -->
+          <div class="place-about">
+            <div class="place-name">
+              <h3>セント・パトリック大聖堂</h3>
+            </div>
+            <p class="place-text about-text">1879 年に建てられた<br>ネオゴシック様式の大聖堂</p>
+          </div>
+        </div>
+        <!--　アート１ -->
+        <div class="visit-place" data-category="art">
+          <!-- 画像 -->
+          <div class="place-image">
+            <img src="./image/art1.JPG" alt="アート" 　 width="250px" height="250px">
+          </div>
+          <!-- 説明 -->
+          <div class="place-about">
+            <div class="place-name">
+              <h3>アートスタジオ</h3>
+            </div>
+            <p class="place-text about-text">街を歩いているだけで、誰にでも公開されている個人のアートを発見できます</p>
+          </div>
+        </div>
+        <!--　アート2 -->
+        <div class="visit-place" data-category="art">
+          <!-- 画像 -->
+          <div class="place-image">
+            <img src="./image/art2.JPG" alt="イサム・ノグチ" 　width="250px" height="250px">
+          </div>
+          <!-- 説明 -->
+          <div class="place-about">
+            <div class="place-name">
+              <h3>パブリックアート</h3>
+            </div>
+            <p class="place-text about-text">ウォール街に突如現れる<br>イサム・ノグチの『赤い立方体』（1968）</p>
+          </div>
+        </div><!--　アート3 -->
+        <div class="visit-place" data-category="art">
+          <!-- 画像 -->
+          <div class="place-image">
+            <img src="./image/art3.JPG" alt="映画のロケ地" 　width="250px" height="250px">
+          </div>
+          <!-- 説明 -->
+          <div class="place-about">
+            <div class="place-name">
+              <h3>映画のロケ地</h3>
+            </div>
+            <p class="place-text about-text">ニューヨークは数多くの映画のロケ地となっています。写真は『スパイダーマン』（2002）のロケ地になった廃墟/スモールポックス記念病院
+                  </p>
+          </div>
+        </div>
+        <!-- 建築１ -->
+        <div class="visit-place" data-category="architecture">
+          <!-- 画像 -->
+          <div class="place-image">
+            <img src="./image/arc1.JPG" alt="グランド・セントラル・ターミナル駅" width="250px" height="250px">
+          </div>
+          <!-- 説明 -->
+          <div class="place-about">
+            <div class="place-name">
+              <h3>グランドセントラル<br>ターミナル駅</h3>
+            </div>
+            <p class="place-text about-text">交通の要所となる主要駅。<br>駅舎は見事な設計で有名</p>
+          </div>
+        </div>
+        <!-- 建築2 -->
+        <div class="visit-place" data-category="architecture">
+          <!-- 画像 -->
+          <div class="place-image">
+            <img src="./image/arc2.JPG" alt="オキュラス　現代建築 " width="250px" height="250px">
+          </div>
+          <!-- 説明 -->
+          <div class="place-about">
+            <div class="place-name">
+              <h3>オキュラス</h3>
+            </div>
+            <p class="place-text about-text">
+      クジラの骨のような印象的な現代建築。ショッピングモールや駅が入っている</p>
+          </div>
+        </div>
+        <!-- 建築3 -->
+        <div class="visit-place" data-category="architecture">
+          <!-- 画像 -->
+          <div class="place-image">
+            <img src="./image/arc3.JPG" alt="ワンワールドトレードセンター" width="250px" height="250px">
+          </div>
+          <!-- 説明 -->
+          <div class="place-about">
+            <div class="place-name">
+              <h3>1 WTC</h3>
+            </div>
+            <p class="place-text about-text">9.11の跡地に建てられた<br>ニューヨーク一高いビル</p>
+          </div>
+        </div>
+        <!-- 景色１ -->
+        <div class="visit-place" data-category="view">
+          <!-- 画像 -->
+          <div class="place-image">
+            <img src="./image/view1.JPG" alt="セントラルパーク　公園" width="250px" height="250px">
+          </div>
+          <!-- 説明 -->
+          <div class="place-about">
+            <div class="place-name">
+              <h3>セントラルパーク</h3>
+            </div>
+            <p class="place-text about-text">マンハッタン島中央に位置する巨大な公園</p>
+          </div>
+        </div>
+        <!-- 景色２ -->
+        <div class="visit-place" data-category="view">
+          <!-- 画像 -->
+          <div class="place-image">
+            <img src="./image/view2.JPG" alt="展望台" width="250px" height="250px">
+          </div>
+          <!-- 説明 -->
+          <div class="place-about">
+            <div class="place-name">
+              <h3>エンパイア・ステート・ビル</h3>
+            </div>
+            <p class="place-text about-text">マンハッタン中心部に聳え立つアールデコの傑作。展望台からはニューヨークの景色が一望できます。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- シーズン 戻る進むボタン -->
+  <section id="season">
+    <div class="container">
+      <div class="title">
+        <h2>SEASON</h2>
+      </div>
+      <div class="season-copy">
+        <h3 class="subtitle">季節ごとの魅力</h3>
+      </div>
+      <div class="season-wrapper">
+
+        <!-- スライド１　jQueryでスライド機能をつける -->
+        <div class="season-box active box-open">
+          <img class="season-image" src="./image/season-spring.jpg" alt="spring new york" height="300px" width="400px">
+          <div class="season-text">
+            <h3>Spring　春</h3>
+            <p class="season-about about-text">寒さ厳しい冬も終わり、多くのニューヨーカーがカフェやレストランのテラス席で食事を楽しむ時期。春のセントラルパークを訪れると、高層ビルを背景に咲き誇る並木の花や緑が楽しめます。 </p>
+          </div>
+        </div>
+        <!-- スライド２ -->
+        <div class="season-box">
+          <img class="season-image" src="./image/season-summer.jpg" alt="Summer new york" height="300px" width="400px">
+          <div class="season-text">
+            <h3>Summer　夏</h3>
+            <p class="season-about about-text">夏のニューヨークでは多くのイベントを楽しめます。<br>野外イベントではミュージカルやオペラが無料で観劇できることも。また多くの施設が営業時間を長く設けており、より沢山の体験ができるでしょう。</p>
+          </div>
+        </div>
+        <!-- スライド３ -->
+        <div class="season-box">
+          <img class="season-image" src="./image/season-fall.jpg" alt="Autumn new york" height="300px" width="400px">
+          <div class="season-text">
+            <h3>Autumn　秋</h3>
+            <p class="season-about about-text">セントラルパークの木々も赤く染まり、秋はゆったりとした時間を過ごせます。芸術の秋はマンハッタンでのんびりと美術館巡りをするのも良いでしょう。10月の中旬頃からは本格的に寒くなるので、コートは必需品です。</p>
+          </div>
+        </div>
+        <!-- スライド４ -->
+        <div class="season-box">
+          <img class="season-image" src="./image/season-winter.jpg" alt="Winter new york" height="300px" width="400px">
+          <div class="season-text">
+            <h3>Winter　冬</h3>
+            <p class="season-about about-text">ニューヨークの冬は12月から3月頃まで続きます。とても寒く、吹雪くこともあるので、防寒対策はしっかりしましょう。日照時間も少なくなりますが、いつでも遊べるスポットはたくさんあるのでご心配なく。メイシーズなどの大型デパートでお買い物を楽しんだあとは、甘いホットチョコレートを試してみてください。</p>
+          </div>
+        </div>
+
+        <!-- 戻る・進むボタン -->
+        <span class="slide-button prev"></span>
+        <span class="slide-button next"></span>
+
+      </div>
+  </section>
+
+
+  <!-- 写真 モーダル機能 -->
+  <section id="photos">
+    <div class="container">
+      <div class="title">
+        <h2>PHOTO GALLERY</h2>
+      </div>
+      <div class="photos-copy">
+        <h3 class="subtitle">クリックで拡大します</h3>
+      </div>
+      <div class="photos-wrapper">
+        <!-- 1 -->
+        <div class="photo-box">
+          <a href="#" class="modalOpen" data-target="modal01">
+            <img class="photos-img" src="./image/IMG_9038.JPG" alt="ニューヨーク" height="120px" width="200px">
+          </a>
+        </div>
+        <!-- １モーダル -->
+        <div class="modal-window" id="modal01">
+          <div class="modal-box">
+            <img class="modal-img" src="./image/IMG_9038.JPG" alt="ニューヨーク">
+            <a class="modalClose">Close</a>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div class="photo-box">
+          <a href="#" class="modalOpen" data-target="modal02">
+            <img class="photos-img" src="./image/IMG_9065.JPG" alt="ニューヨーク" height="120px" width="200px">
+          </a>
+        </div>
+        <!-- 2モーダル -->
+        <div class="modal-window" id="modal02">
+          <div class="modal-box">
+            <img class="modal-img" src="./image/IMG_9065.JPG" alt="ニューヨーク">
+            <a class="modalClose">Close</a>
+          </div>
+        </div>
+        <!-- 3-->
+        <div class="photo-box">
+          <a href="#" class="modalOpen" data-target="modal03">
+            <img class="photos-img" src="./image/IMG_9166.JPG" alt="ニューヨーク" height="120px" width="200px">
+          </a>
+        </div>
+        <!-- 3モーダル -->
+        <div class="modal-window" id="modal03">
+          <div class="modal-box">
+            <img class="modal-img" src="./image/IMG_9166.JPG" alt="ニューヨーク">
+            <a class="modalClose">Close</a>
+          </div>
+        </div>
+        <!-- 4 -->
+        <div class="photo-box">
+          <a href="#" class="modalOpen" data-target="modal04">
+            <img class="photos-img" src="./image/IMG_9290.JPG" alt="ニューヨーク" height="120px" width="200px">
+          </a>
+        </div>
+        <!-- 4モーダル -->
+        <div class="modal-window" id="modal04">
+          <div class="modal-box">
+            <img class="modal-img" src="./image/IMG_9290.JPG" alt="ニューヨーク">
+            <a class="modalClose">Close</a>
+          </div>
+        </div>
+        <!-- 5 -->
+        <div class="photo-box">
+          <a href="#" class="modalOpen" data-target="modal05">
+            <img class="photos-img" src="./image/IMG_9567.JPG" alt="ニューヨーク" height="120px" width="200px">
+          </a>
+        </div>
+        <!-- 5モーダル -->
+        <div class="modal-window" id="modal05">
+          <div class="modal-box">
+            <img class="modal-img" src="./image/IMG_9567.JPG" alt="ニューヨーク">
+            <a class="modalClose">Close</a>
+          </div>
+        </div>
+        <!-- 6 -->
+        <div class="photo-box">
+          <a href="#" class="modalOpen" data-target="modal06">
+            <img class="photos-img" src="./image/IMG_9662.JPG" alt="ニューヨーク" height="120px" width="200px">
+          </a>
+        </div>
+        <!-- 6モーダル -->
+        <div class="modal-window" id="modal06">
+          <div class="modal-box">
+            <img class="modal-img" src="./image/IMG_9662.JPG" alt="ニューヨーク">
+            <a class="modalClose">Close</a>
+          </div>
+        </div>
+        <!-- 7 -->
+        <div class="photo-box">
+          <a href="#" class="modalOpen" data-target="modal07">
+            <img class="photos-img" src="./image/IMG_9925.JPG" alt="ニューヨーク" height="120px" width="200px">
+          </a>
+        </div>
+        <!-- 7モーダル -->
+        <div class="modal-window" id="modal07">
+          <div class="modal-box">
+            <img class="modal-img" src="./image/IMG_9925.JPG" alt="ニューヨーク">
+            <a class="modalClose">Close</a>
+          </div>
+        </div>
+        <!-- 8 -->
+        <div class="photo-box">
+          <a href="#" class="modalOpen" data-target="modal08">
+            <img class="photos-img" src="./image/IMG_9934.JPG" alt="ニューヨーク" height="120px" width="200px">
+          </a>
+        </div>
+        <!-- 8モーダル -->
+        <div class="modal-window" id="modal08">
+          <div class="modal-box">
+            <img class="modal-img" src="./image/IMG_9934.JPG" alt="ニューヨーク">
+            <a class="modalClose">Close</a>
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+  <section id="info">
+    <div class="container">
+      <div class="title">
+        <h2>COMPANY INFO</h2>
+      </div>
+      <div class="info-copy">
+        <h3 class="subtitle">会社概要</h3>
+      </div>
+      <div class="info-wrapper">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5337.024959528194!2d139.7679862739455!3d35.63012233949861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbc7e67300e8691a3!2z44GK5Y-w5aC044Gu6Ieq55Sx44Gu5aWz56We!5e0!3m2!1sja!2sjp!4v1623163552189!5m2!1sja!2sjp" width="500" height="380" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="info-text">
+          <ul class="info-list">
+            <li class="info-box">
+              <p class="info-title">会社名</p>
+              <p class="main">株式会社マンハッタン・トリップ</p>
+            </li>
+            <li class="info-box">
+              <p class="info-title">代表者</p>
+              <p class="main">天</p>
+            </li>
+            <li class="info-box">
+              <p class="info-title">設立</p>
+              <p class="main">2021年6月10日</p>
+            </li>
+            <li class="info-box">
+              <p class="info-title">住所</p>
+              <p class="main">〒000-0000</p>
+            </li>
+            <li class="info-box">
+              <p class="main-address">東京都港区●●0-0-0</p>
+            </li>
+            <li class="info-box">
+              <p class="info-title">TEL</p>
+              <p class="main"><a class="tel" href="tel:0120000000">0120-000-000</a></p>
+            </li>
+            <li class="info-box">
+              <p class="info-title">営業時間</p>
+              <p class="main">10:00〜19:00（水曜定休日）</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="title">
+        <h2>CONTACT</h2>
+      </div>
+      <div class="contact-copy">
+        <h3 class="subtitle">旅の予定を立てる</h3>
+        <!-- 予約ボタン -->
+        <div class="reservation-button">
+          <a href="#">▷ ご相談予約 ◁</a>
+        </div>
+      </div>
+      <div class="contact-copy">
+        <p></p>
+        <h3 class="subtitle">その他お問い合わせフォーム</h3>
+      </div>
+      <div class="contact-wrapper">
+      </div>
+      <!-- ＊サーバーサイド未実装＊ -->
+      <form action="index.php" method="post">
+        <div class="contact-box">
+          <label class="form-text" for="name">お名前</label>
+          <input type="text" name="yourname" class="form-name" id="name" placeholder="例）山田太郎">
+        </div>
+        <div class="contact-box">
+          <label class="form-text" for="email">メールアドレス</label>
+          <input type="text" name="mail" class="form-mail" id="email" placeholder="例）example@gmail.com">
+        </div>
+        <div class="contact-box">
+          <label class="form-text" for="question">お問い合わせ内容</label>
+          <textarea name="question-form" id="question" cols="60" rows="6" placeholder="ここに記入して下さい"></textarea>
+        </div>
+
+        <!-- 送信ボタン -->
+        <input class="send-button" type="submit" value="送信">
+      </form>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="container">
+      <div class="footer-wrapper">
+        <div class="footer-logo">
+          <a href="#" class="logo">Manhattan Trip</a>
+          <!-- SNSリンク -->
+          <div class="sns-block">
+            <a class="sns-icon" href="https://twitter.com/" target="_blank">
+              <span class="fa fa-twitter"></span>
+            </a>
+            <a class="sns-icon" href="https://www.instagram.com/" target="_blank">
+              <span class="fa fa-instagram"></span>
+            </a>
+            <a class="sns-icon" href="https://www.facebook.com/" target="_blank">
+              <span class="fa fa-facebook"></span>
+            </a>
+          </div>
+        </div>
+        <div class="footer-menu">
+          <ul>
+            <li><a href="#">利用規約</a></li>
+            <li><a href="#">特定商取引法について</a></li>
+            <li><a href="#">プライバシーポリシー</a></li>
+          </ul>
+        </div>
+      </div>
+      <small>Copyright © 2021 K.K. Manhattan Trip All Rights Reserved.</small>
+    </div>
+  </footer>
+
+</body>
+</html>
