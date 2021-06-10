@@ -3,59 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- スマホなどで閲覧した際の「表示領域」を設定 -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Manhattan Trip</title>
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
-  <!-- 追加フォント -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
-  <!-- SNSアイコン -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <!-- javascript　jQueryを同期 -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="./js/script.js"></script>
 </head>
 
 
 <body>
-  <!-- ヘッダーメニュー -->
+
   <header>
     <nav class="g-navi">
       <div class="container nav-wrapper">
         <ul>
-          <!-- concept -->
           <li><a href="#aboutUs">ABOUT US</a></li>
-          <!-- Feature -->
           <li><a href="#plans">PLANS</a></li>
-          <!-- Line Up -->
           <li><a href="#visit">VISIT</a></li>
-          <!-- macaronlife ポップアップ機能 -->
           <li><a href="#photos">GALLERY</a></li>
-          <!-- store -->
           <li><a href="#info">COMPANY INFO</a></li>
-          <!-- contact -->
           <li><a href="#contact">CONTACT</a></li>
         </ul>
       </div>
     </nav>
-
-
   </header>
 
-  <!-- メインビジュアル -->
   <section id="main-visual">
     <div class="container mv-wrapper">
       <div class="mv-title">
         <h1>Manhattan Trip</h1>
-        <p class="text">ニューヨーク・マンハッタンを体験する</p>
+        <p class="mv-text">ニューヨーク・マンハッタンを体験する</p>
       </div>
     </div>
-
   </section>
 
-  <!-- 1.ABOUT US -->
   <section id="aboutUs">
     <div class="container">
       <div class="title">
@@ -70,7 +55,6 @@
     </div>
   </section>
 
-  <!-- PLANS -->
   <section id="plans">
     <div class="container">
       <div class="title">
@@ -81,7 +65,7 @@
       </div>
       <div class="plans-wrapper">
         <!-- ボックス１ -->
-        <div class="plans-box box-design">
+        <div class="plans-box">
           <img class="plans-image" src="./image/money.png" alt="money" height="180px" width="180px">
           <div class="plans-text">
             <span class="plans-title-en">Budget</span>
@@ -91,7 +75,7 @@
           </div>
         </div>
         <!-- ボックス２ -->
-        <div class="plans-box box-design">
+        <div class="plans-box">
           <img class="plans-image" src="./image/calendar.png" alt="calender" height="180px" width="180px">
           <div class="plans-text">
             <span class="plans-title-en">Days</span>
@@ -101,7 +85,7 @@
           </div>
         </div>
         <!-- ボックス３ -->
-        <div class="plans-box box-design">
+        <div class="plans-box">
           <img class="plans-image" src="./image/mindset.png" alt="mind" height="180px" width="180px">
           <div class="plans-text">
             <span class="plans-title-en">Purpose</span>
@@ -110,10 +94,8 @@
           </div>
         </div>
       </div>
-
   </section>
-
-  <!-- 観光名所 メニュータグ付き-->
+  
   <section id="visit">
     <div class="container">
       <div class="title">
@@ -122,7 +104,6 @@
       <div class="visit-copy">
         <h3 class="subtitle">主な観光名所</h3>
       </div>
-      <!-- メニュータグ　jQueryで切り替えメニュー処理 -->
       <div class="visit-menu">
         <ul class="filter">
           <li class="visit-tab"><a class="landmark active" data-filter="landmark" href="#">ランドマーク</a></li>
@@ -135,27 +116,21 @@
       <div class="visit-wrapper">
         <!-- ランドマーク１ -->
         <div class="visit-place is-showed" data-category="landmark">
-          <!-- 画像 -->
           <div class="place-image">
             <img src="./image/icon1.JPG" alt="タイムズスクエア" width="250px" height="250px">
           </div>
-          <!-- 説明 -->
           <div class="place-about">
             <div class="place-name">
               <h3>タイムズスクエア</h3>
             </div>
-            <p class="place-text about-text">
-                    華やかなネオンとブロードウェイの舞台
-                  </p>
+            <p class="place-text about-text">華やかなネオンとブロードウェイの舞台</p>
           </div>
         </div>
         <!-- ランドマーク２ -->
         <div class="visit-place is-showed" data-category="landmark">
-          <!-- 画像 -->
           <div class="place-image">
             <img src="./image/icon2.JPG" alt="自由の女神" width="250px" height="250px">
           </div>
-          <!-- 説明 -->
           <div class="place-about">
             <div class="place-name">
               <h3>自由の女神</h3>
@@ -165,26 +140,21 @@
         </div>
         <!-- 歴史１ -->
         <div class="visit-place" data-category="history">
-          <!-- 画像 -->
           <div class="place-image">
             <img src="./image/history1.JPG" alt="博物館　恐竜" width="250px" height="250px">
           </div>
-          <!-- 説明 -->
           <div class="place-about">
             <div class="place-name">
               <h3>アメリカ自然史博物館</h3>
             </div>
-            <p class="place-text about-text">恐竜から宇宙まで<br>自然をテーマにした巨大博物館
-                  </p>
+            <p class="place-text about-text">恐竜から宇宙まで<br>自然をテーマにした巨大博物館</p>
           </div>
         </div>
         <!-- 歴史２ -->
         <div class="visit-place" data-category="history">
-          <!-- 画像 -->
           <div class="place-image">
             <img src="./image/hisotry2.JPG" alt="ワールドトレードセンター 9.11" width="250px" height="250px">
           </div>
-          <!-- 説明 -->
           <div class="place-about">
             <div class="place-name">
               <h3>9.11メモリアル</h3>
@@ -194,11 +164,9 @@
         </div>
         <!-- 歴史３ -->
         <div class="visit-place" data-category="history">
-          <!-- 画像 -->
           <div class="place-image">
             <img src="./image/hstory3.JPG" alt="セント・パトリック大聖堂" width="250px" height="250px">
           </div>
-          <!-- 説明 -->
           <div class="place-about">
             <div class="place-name">
               <h3>セント・パトリック大聖堂</h3>
@@ -208,11 +176,9 @@
         </div>
         <!--　アート１ -->
         <div class="visit-place" data-category="art">
-          <!-- 画像 -->
           <div class="place-image">
             <img src="./image/art1.JPG" alt="アート" 　 width="250px" height="250px">
           </div>
-          <!-- 説明 -->
           <div class="place-about">
             <div class="place-name">
               <h3>アートスタジオ</h3>
@@ -222,11 +188,9 @@
         </div>
         <!--　アート2 -->
         <div class="visit-place" data-category="art">
-          <!-- 画像 -->
           <div class="place-image">
             <img src="./image/art2.JPG" alt="イサム・ノグチ" 　width="250px" height="250px">
           </div>
-          <!-- 説明 -->
           <div class="place-about">
             <div class="place-name">
               <h3>パブリックアート</h3>
@@ -235,26 +199,21 @@
           </div>
         </div><!--　アート3 -->
         <div class="visit-place" data-category="art">
-          <!-- 画像 -->
           <div class="place-image">
             <img src="./image/art3.JPG" alt="映画のロケ地" 　width="250px" height="250px">
           </div>
-          <!-- 説明 -->
           <div class="place-about">
             <div class="place-name">
               <h3>映画のロケ地</h3>
             </div>
-            <p class="place-text about-text">ニューヨークは数多くの映画のロケ地となっています。写真は『スパイダーマン』（2002）のロケ地になった廃墟/スモールポックス記念病院
-                  </p>
+            <p class="place-text about-text">ニューヨークは数多くの映画のロケ地となっています。写真は『スパイダーマン』（2002）のロケ地になった廃墟/スモールポックス記念病院</p>
           </div>
         </div>
         <!-- 建築１ -->
         <div class="visit-place" data-category="architecture">
-          <!-- 画像 -->
           <div class="place-image">
             <img src="./image/arc1.JPG" alt="グランド・セントラル・ターミナル駅" width="250px" height="250px">
           </div>
-          <!-- 説明 -->
           <div class="place-about">
             <div class="place-name">
               <h3>グランドセントラル<br>ターミナル駅</h3>
@@ -264,11 +223,9 @@
         </div>
         <!-- 建築2 -->
         <div class="visit-place" data-category="architecture">
-          <!-- 画像 -->
           <div class="place-image">
             <img src="./image/arc2.JPG" alt="オキュラス　現代建築 " width="250px" height="250px">
           </div>
-          <!-- 説明 -->
           <div class="place-about">
             <div class="place-name">
               <h3>オキュラス</h3>
@@ -279,11 +236,9 @@
         </div>
         <!-- 建築3 -->
         <div class="visit-place" data-category="architecture">
-          <!-- 画像 -->
           <div class="place-image">
             <img src="./image/arc3.JPG" alt="ワンワールドトレードセンター" width="250px" height="250px">
           </div>
-          <!-- 説明 -->
           <div class="place-about">
             <div class="place-name">
               <h3>1 WTC</h3>
@@ -293,11 +248,9 @@
         </div>
         <!-- 景色１ -->
         <div class="visit-place" data-category="view">
-          <!-- 画像 -->
           <div class="place-image">
             <img src="./image/view1.JPG" alt="セントラルパーク　公園" width="250px" height="250px">
           </div>
-          <!-- 説明 -->
           <div class="place-about">
             <div class="place-name">
               <h3>セントラルパーク</h3>
@@ -307,11 +260,9 @@
         </div>
         <!-- 景色２ -->
         <div class="visit-place" data-category="view">
-          <!-- 画像 -->
           <div class="place-image">
             <img src="./image/view2.JPG" alt="展望台" width="250px" height="250px">
           </div>
-          <!-- 説明 -->
           <div class="place-about">
             <div class="place-name">
               <h3>エンパイア・ステート・ビル</h3>
@@ -323,7 +274,6 @@
     </div>
   </section>
 
-  <!-- シーズン 戻る進むボタン -->
   <section id="season">
     <div class="container">
       <div class="title">
@@ -333,8 +283,7 @@
         <h3 class="subtitle">季節ごとの魅力</h3>
       </div>
       <div class="season-wrapper">
-
-        <!-- スライド１　jQueryでスライド機能をつける -->
+        <!-- スライド１-->
         <div class="season-box active box-open">
           <img class="season-image" src="./image/season-spring.jpg" alt="spring new york" height="300px" width="400px">
           <div class="season-text">
@@ -366,16 +315,12 @@
             <p class="season-about about-text">ニューヨークの冬は12月から3月頃まで続きます。とても寒く、吹雪くこともあるので、防寒対策はしっかりしましょう。日照時間も少なくなりますが、いつでも遊べるスポットはたくさんあるのでご心配なく。メイシーズなどの大型デパートでお買い物を楽しんだあとは、甘いホットチョコレートを試してみてください。</p>
           </div>
         </div>
-
         <!-- 戻る・進むボタン -->
         <span class="slide-button prev"></span>
         <span class="slide-button next"></span>
-
       </div>
   </section>
 
-
-  <!-- 写真 モーダル機能 -->
   <section id="photos">
     <div class="container">
       <div class="title">
@@ -492,7 +437,6 @@
       </div>
   </section>
 
-
   <section id="info">
     <div class="container">
       <div class="title">
@@ -507,36 +451,34 @@
           <ul class="info-list">
             <li class="info-box">
               <p class="info-title">会社名</p>
-              <p class="main">株式会社マンハッタン・トリップ</p>
+              <p class="info-main">株式会社マンハッタン・トリップ</p>
             </li>
             <li class="info-box">
               <p class="info-title">代表者</p>
-              <p class="main">TS-0211</p>
+              <p class="info-main">TS-0211</p>
             </li>
             <li class="info-box">
               <p class="info-title">設立</p>
-              <p class="main">2021年6月10日</p>
+              <p class="info-main">2021年6月10日</p>
             </li>
             <li class="info-box">
               <p class="info-title">住所</p>
-              <p class="main">〒000-0000</p>
+              <p class="info-main">〒000-0000</p>
             </li>
             <li class="info-box">
               <p class="main-address">東京都港区●●0-0-0</p>
             </li>
             <li class="info-box">
               <p class="info-title">TEL</p>
-              <p class="main"><a class="tel" href="tel:0120000000">0120-000-000</a></p>
+              <p class="info-main"><a class="tel" href="tel:0120000000">0120-000-000</a></p>
             </li>
             <li class="info-box">
               <p class="info-title">営業時間</p>
-              <p class="main">10:00〜19:00（水曜定休日）</p>
+              <p class="info-main">10:00〜19:00（水曜定休日）</p>
             </li>
           </ul>
         </div>
       </div>
-
-
   </section>
 
   <section id="contact">
@@ -546,7 +488,6 @@
       </div>
       <div class="contact-copy">
         <h3 class="subtitle">旅の予定を立てる</h3>
-        <!-- 予約ボタン -->
         <div class="reservation-button">
           <a href="#">▷ ご相談予約 ◁</a>
         </div>
@@ -557,7 +498,6 @@
       </div>
       <div class="contact-wrapper">
       </div>
-      <!-- ＊サーバーサイド未実装＊ -->
       <form action="index.php" method="post">
         <div class="contact-box">
           <label class="form-text" for="name">お名前</label>
@@ -571,8 +511,6 @@
           <label class="form-text" for="question">お問い合わせ内容</label>
           <textarea name="question-form" id="question" cols="60" rows="6" placeholder="ここに記入して下さい"></textarea>
         </div>
-
-        <!-- 送信ボタン -->
         <input class="send-button" type="submit" value="送信">
       </form>
     </div>
@@ -584,17 +522,13 @@
       <div class="footer-wrapper">
         <div class="footer-logo">
           <a href="#" class="logo">Manhattan Trip</a>
-          <!-- SNSリンク -->
           <div class="sns-block">
             <a class="sns-icon" href="https://twitter.com/" target="_blank">
-              <span class="fa fa-twitter"></span>
-            </a>
+              <span class="fa fa-twitter"></span></a>
             <a class="sns-icon" href="https://www.instagram.com/" target="_blank">
-              <span class="fa fa-instagram"></span>
-            </a>
+              <span class="fa fa-instagram"></span></a>
             <a class="sns-icon" href="https://www.facebook.com/" target="_blank">
-              <span class="fa fa-facebook"></span>
-            </a>
+              <span class="fa fa-facebook"></span></a>
           </div>
         </div>
         <div class="footer-menu">
@@ -610,4 +544,5 @@
   </footer>
 
 </body>
+    
 </html>
